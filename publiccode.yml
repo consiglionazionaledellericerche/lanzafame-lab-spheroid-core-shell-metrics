@@ -1,0 +1,70 @@
+# This repository adheres to the publiccode.yml standard by including this
+# metadata file that makes public software easily discoverable.
+# More info at https://github.com/publiccodeyml/publiccode.yml
+
+publiccodeYmlVersion: '0.7'
+name: Spheroid Core-Shell Metrics
+url: https://github.com/consiglionazionaledellericerche/lanzafame-lab-spheroid-core-shell-metrics
+landingURL: https://lanzafame-lab-spheroid-core-shell-metrics.onrender.com/
+softwareVersion: 1.0.0
+releaseDate: '2026-11-11'
+organisation:
+  uri: urn:x-italian-pa:cnr
+  name: Consiglio Nazionale delle Ricerche
+platforms:
+- web
+categories:
+- data-analytics
+- data-visualization
+developmentStatus: beta
+softwareType: standalone/web
+description:
+  en:
+    shortDescription: Web tool for core-shell morphometric and radial profiling analysis of two-channel fluorescence images of co-culture spheroids.
+    longDescription: |
+      Spheroid Core-Shell Metrics is a browser-based interface to the image-analysis pipeline of a Scientific Data Data Descriptor on melanoma-fibroblast co-spheroids.
+
+      Users upload a pair of widefield fluorescence images of the same spheroid (one channel per cell population), choose the pixel size and segmentation parameters, and obtain the spheroid mask with a quality-control overlay, morphometric measurements, core-shell enrichment metrics and the radial intensity profile of each channel, all downloadable as CSV files.
+
+      The computation uses the same segmentation and metric functions as the published pipeline (https://github.com/consiglionazionaledellericerche/lanzafame-lab-melanoma-fibroblast-spheroids) and reproduces its processed output. Uploaded images are written to a temporary folder and deleted as soon as the analysis is complete.
+    documentation: https://github.com/consiglionazionaledellericerche/lanzafame-lab-spheroid-core-shell-metrics/blob/main/README.md
+    features:
+    - Segmentation of a single spheroid from two-channel fluorescence images
+    - Quality-control overlay of the segmentation mask
+    - Morphometric and core-shell enrichment metrics
+    - Radial intensity profiles for both channels
+    - CSV download of all results
+  it:
+    shortDescription: Strumento web per l'analisi morfometrica core-shell e dei profili radiali di immagini a fluorescenza a due canali di sferoidi in co-coltura.
+    longDescription: |
+      Spheroid Core-Shell Metrics è un'interfaccia web alla pipeline di analisi di immagini di un Data Descriptor pubblicato su Scientific Data sugli sferoidi di melanoma e fibroblasti.
+
+      L'utente carica una coppia di immagini a fluorescenza widefield dello stesso sferoide (un canale per ciascuna popolazione cellulare), sceglie la dimensione del pixel e i parametri di segmentazione, e ottiene la maschera dello sferoide con un'immagine di controllo qualità, le misure morfometriche, le metriche di arricchimento core-shell e il profilo radiale di intensità di ciascun canale, tutti scaricabili in formato CSV.
+
+      Il calcolo usa le stesse funzioni di segmentazione e di calcolo delle metriche della pipeline pubblicata (https://github.com/consiglionazionaledellericerche/lanzafame-lab-melanoma-fibroblast-spheroids) e ne riproduce i risultati. Le immagini caricate vengono salvate in una cartella temporanea e cancellate al termine dell'analisi.
+    documentation: https://github.com/consiglionazionaledellericerche/lanzafame-lab-spheroid-core-shell-metrics/blob/main/README.md
+    features:
+    - Segmentazione di un singolo sferoide da immagini a fluorescenza a due canali
+    - Immagine di controllo qualità della maschera di segmentazione
+    - Metriche morfometriche e di arricchimento core-shell
+    - Profili radiali di intensità per entrambi i canali
+    - Download in CSV di tutti i risultati
+legal:
+  license: MIT
+  mainCopyrightOwner: Institute of Molecular Genetics "Luigi Luca Cavalli-Sforza" - Consiglio Nazionale delle Ricerche
+  repoOwner: Consiglio Nazionale delle Ricerche
+maintenance:
+  type: internal
+  contacts:
+  - name: Manuela Lanzafame
+    affiliation: CNR-IGM Institute of Molecular Genetics "Luigi Luca Cavalli-Sforza", Pavia, Italy
+localisation:
+  localisationReady: false
+  availableLanguages:
+  - en
+dependsOn:
+  open:
+  - name: Python
+    versionMin: '3.11'
+  - name: Flask
+    versionMin: '3.0'

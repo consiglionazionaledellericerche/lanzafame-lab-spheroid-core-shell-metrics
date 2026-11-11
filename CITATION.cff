@@ -1,0 +1,57 @@
+cff-version: 1.2.0
+message: "If you use this tool, please cite the Data Descriptor below."
+title: "Spheroid Core-Shell Metrics"
+type: software
+license: MIT
+version: "1.0.0"
+date-released: 2026-11-11
+url: "https://lanzafame-lab-spheroid-core-shell-metrics.onrender.com"
+repository-code: "https://github.com/consiglionazionaledellericerche/lanzafame-lab-spheroid-core-shell-metrics"
+# TODO after publication: add the DOI of the article to preferred-citation.
+authors:
+  - family-names: Lanzafame
+    given-names: Manuela
+    affiliation: "CNR-IGM Institute of Molecular Genetics \"Luigi Luca Cavalli-Sforza\", Pavia, Italy"
+    orcid: "https://orcid.org/0000-0002-0456-1134"
+preferred-citation:
+  type: article
+  title: "Fluorescence imaging dataset of melanoma fibroblast co-spheroids with morphometric and radial profiling data"
+  journal: "Scientific Data"
+  year: 2026
+  status: submitted
+  authors:
+    - family-names: Veniali
+      given-names: Gaia
+    - family-names: Galli Balestreri
+      given-names: Elena
+    - family-names: Orioli
+      given-names: Donata
+    - family-names: Lanzafame
+      given-names: Manuela
+references:
+  - type: software
+    title: "Melanoma-fibroblast-spheroids: image-analysis pipeline"
+    version: "1.1.0"
+    doi: 10.5281/zenodo.24144822
+    url: "https://doi.org/10.5281/zenodo.24144822"
+    repository-code: "https://github.com/consiglionazionaledellericerche/lanzafame-lab-melanoma-fibroblast-spheroids"
+    year: 2026
+    authors:
+      - family-names: Lanzafame
+        given-names: Manuela
+  - type: data
+    title: "Fluorescence imaging dataset of melanoma fibroblast co-spheroids with morphometric and radial profiling data"
+    doi: 10.6019/S-BIAD4346
+    url: "https://doi.org/10.6019/S-BIAD4346"
+    year: 2026
+    publisher:
+      name: "BioImage Archive"
+    authors:
+      - family-names: Veniali
+        given-names: Gaia
+      - family-names: Galli Balestreri
+        given-names: Elena
+      - family-names: Orioli
+        given-names: Donata
+      - family-names: Lanzafame
+        given-names: Manuela
