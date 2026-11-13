@@ -2,53 +2,55 @@
 # metadata file that makes public software easily discoverable.
 # More info at https://github.com/publiccodeyml/publiccode.yml
 
-publiccodeYmlVersion: '0.7'
-name: Spheroid Core-Shell Metrics
-url: https://github.com/consiglionazionaledellericerche/lanzafame-lab-spheroid-core-shell-metrics
-landingURL: https://lanzafame-lab-spheroid-core-shell-metrics.onrender.com/
-softwareVersion: 1.0.0
+publiccodeYmlVersion: '0.5'
+name: melanoma-fibroblast-spheroids
+url: https://github.com/consiglionazionaledellericerche/lanzafame-lab-melanoma-fibroblast-spheroids
+softwareVersion: 1.1.0
 releaseDate: '2026-11-11'
 organisation:
   uri: urn:x-italian-pa:cnr
   name: Consiglio Nazionale delle Ricerche
 platforms:
-- web
+- linux
+- mac
+- windows
 categories:
 - data-analytics
-- data-visualization
-developmentStatus: beta
-softwareType: standalone/web
+developmentStatus: stable
+softwareType: standalone/other
 description:
   en:
-    shortDescription: Web tool for core-shell morphometric and radial profiling analysis of two-channel fluorescence images of co-culture spheroids.
+    shortDescription: 'Image-analysis pipeline for fluorescence images of melanoma-fibroblast co-spheroids: morphometry, radial profiles and core-shell metrics.'
     longDescription: |
-      Spheroid Core-Shell Metrics is a browser-based interface to the image-analysis pipeline of a Scientific Data Data Descriptor on melanoma-fibroblast co-spheroids.
+      A command-line Python pipeline that turns two-channel fluorescence images of heterotypic melanoma-fibroblast spheroids into quantitative descriptors of spheroid shape and of the spatial arrangement of the two cell populations.
 
-      Users upload a pair of widefield fluorescence images of the same spheroid (one channel per cell population), choose the pixel size and segmentation parameters, and obtain the spheroid mask with a quality-control overlay, morphometric measurements, core-shell enrichment metrics and the radial intensity profile of each channel, all downloadable as CSV files.
+      For each spheroid, the GFP (melanoma) and PKH26 (fibroblast) widefield images are paired by filename and the spheroid is segmented. The pipeline then computes morphometric descriptors, radial intensity profiles of both channels over 20 concentric rings and core-shell metrics of their relative radial position. Further scripts analyse confocal z-stacks, convert Leica .lif files to OME-TIFF and run image-quality and segmentation-robustness checks.
 
-      The computation uses the same segmentation and metric functions as the published pipeline (https://github.com/consiglionazionaledellericerche/lanzafame-lab-melanoma-fibroblast-spheroids) and reproduces its processed output. Uploaded images are written to a temporary folder and deleted as soon as the analysis is complete.
-    documentation: https://github.com/consiglionazionaledellericerche/lanzafame-lab-spheroid-core-shell-metrics/blob/main/README.md
+      The code reproduces the processed data of the dataset described in a Scientific Data Data Descriptor and deposited in the BioImage Archive (accession S-BIAD4346, https://doi.org/10.6019/S-BIAD4346). It runs on Linux, macOS and Windows with Python 3 and standard scientific libraries (NumPy, pandas, scikit-image, OpenCV).
+    documentation: https://github.com/consiglionazionaledellericerche/lanzafame-lab-melanoma-fibroblast-spheroids/blob/main/docs/pipeline_overview.md
     features:
-    - Segmentation of a single spheroid from two-channel fluorescence images
-    - Quality-control overlay of the segmentation mask
-    - Morphometric and core-shell enrichment metrics
-    - Radial intensity profiles for both channels
-    - CSV download of all results
+    - Pairing of the GFP and PKH26 images of each spheroid by filename
+    - Spheroid segmentation and morphometric descriptors in pixels and micrometres
+    - Radial intensity profiles of both cell populations over 20 concentric rings
+    - Core-shell metrics of the relative radial position of the two populations
+    - Confocal z-stack analysis and lossless conversion of Leica .lif files to OME-TIFF
+    - Image-quality and segmentation-robustness checks
   it:
-    shortDescription: Strumento web per l'analisi morfometrica core-shell e dei profili radiali di immagini a fluorescenza a due canali di sferoidi in co-coltura.
+    shortDescription: 'Pipeline di analisi di immagini di fluorescenza di co-sferoidi di melanoma e fibroblasti: morfometria, profili radiali e metriche core-shell.'
     longDescription: |
-      Spheroid Core-Shell Metrics è un'interfaccia web alla pipeline di analisi di immagini di un Data Descriptor pubblicato su Scientific Data sugli sferoidi di melanoma e fibroblasti.
+      Pipeline Python a riga di comando che trasforma immagini di fluorescenza a due canali di sferoidi eterotipici di melanoma e fibroblasti in descrittori quantitativi della forma dello sferoide e della disposizione spaziale delle due popolazioni cellulari.
 
-      L'utente carica una coppia di immagini a fluorescenza widefield dello stesso sferoide (un canale per ciascuna popolazione cellulare), sceglie la dimensione del pixel e i parametri di segmentazione, e ottiene la maschera dello sferoide con un'immagine di controllo qualità, le misure morfometriche, le metriche di arricchimento core-shell e il profilo radiale di intensità di ciascun canale, tutti scaricabili in formato CSV.
+      Per ogni sferoide, le immagini widefield GFP (melanoma) e PKH26 (fibroblasti) vengono appaiate in base al nome del file e lo sferoide viene segmentato. La pipeline calcola poi descrittori morfometrici, profili radiali di intensità dei due canali su 20 anelli concentrici e metriche core-shell della loro posizione radiale relativa. Altri script analizzano gli z-stack confocali, convertono i file Leica .lif in OME-TIFF ed eseguono controlli di qualità delle immagini e di robustezza della segmentazione.
 
-      Il calcolo usa le stesse funzioni di segmentazione e di calcolo delle metriche della pipeline pubblicata (https://github.com/consiglionazionaledellericerche/lanzafame-lab-melanoma-fibroblast-spheroids) e ne riproduce i risultati. Le immagini caricate vengono salvate in una cartella temporanea e cancellate al termine dell'analisi.
-    documentation: https://github.com/consiglionazionaledellericerche/lanzafame-lab-spheroid-core-shell-metrics/blob/main/README.md
+      Il codice riproduce i dati processati del dataset descritto in un Data Descriptor di Scientific Data e depositato nel BioImage Archive (accession S-BIAD4346, https://doi.org/10.6019/S-BIAD4346). Funziona su Linux, macOS e Windows con Python 3 e librerie scientifiche standard (NumPy, pandas, scikit-image, OpenCV).
+    documentation: https://github.com/consiglionazionaledellericerche/lanzafame-lab-melanoma-fibroblast-spheroids/blob/main/docs/pipeline_overview.md
     features:
-    - Segmentazione di un singolo sferoide da immagini a fluorescenza a due canali
-    - Immagine di controllo qualità della maschera di segmentazione
-    - Metriche morfometriche e di arricchimento core-shell
-    - Profili radiali di intensità per entrambi i canali
-    - Download in CSV di tutti i risultati
+    - Appaiamento delle immagini GFP e PKH26 di ogni sferoide in base al nome del file
+    - Segmentazione dello sferoide e descrittori morfometrici in pixel e micrometri
+    - Profili radiali di intensità delle due popolazioni cellulari su 20 anelli concentrici
+    - Metriche core-shell della posizione radiale relativa delle due popolazioni
+    - Analisi degli z-stack confocali e conversione senza perdita dei file Leica .lif in OME-TIFF
+    - Controlli di qualità delle immagini e di robustezza della segmentazione
 legal:
   license: MIT
   mainCopyrightOwner: Institute of Molecular Genetics "Luigi Luca Cavalli-Sforza" - Consiglio Nazionale delle Ricerche
@@ -57,14 +59,8 @@ maintenance:
   type: internal
   contacts:
   - name: Manuela Lanzafame
-    affiliation: CNR-IGM Institute of Molecular Genetics "Luigi Luca Cavalli-Sforza", Pavia, Italy
+    affiliation: CNR-IGM Institute of Molecular Genetics "Luigi Luca Cavalli-Sforza"
 localisation:
   localisationReady: false
   availableLanguages:
   - en
-dependsOn:
-  open:
-  - name: Python
-    versionMin: '3.11'
-  - name: Flask
-    versionMin: '3.0'
